@@ -1,0 +1,70 @@
+{
+  "name": "readable-by-ai",
+  "version": "1.0.0",
+  "description": "Check how much of a website AI assistants can actually read: JavaScript-only pages, robots.txt rules for AI crawlers, Cloudflare blocks, structured data, llms.txt and more.",
+  "license": "MIT",
+  "author": "Khlumen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladIDH/readable-by-ai.git"
+  },
+  "homepage": "https://github.com/vladIDH/readable-by-ai#readme",
+  "bugs": {
+    "url": "https://github.com/vladIDH/readable-by-ai/issues"
+  },
+  "type": "module",
+  "bin": {
+    "readable-by-ai": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --import tsx --test \"test/*.test.ts\"",
+    "test:browser": "node --import tsx --test \"test/browser.integration.ts\"",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "peerDependencies": {
+    "puppeteer-core": ">=23"
+  },
+  "peerDependenciesMeta": {
+    "puppeteer-core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "puppeteer-core": "^25.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  },
+  "keywords": [
+    "ai",
+    "seo",
+    "geo",
+    "aeo",
+    "llm",
+    "crawler",
+    "robots.txt",
+    "gptbot",
+    "claudebot",
+    "perplexity",
+    "llms.txt",
+    "structured-data",
+    "javascript-rendering"
+  ]
+}
