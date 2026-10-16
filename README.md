@@ -3,7 +3,8 @@
 How much of your website can AI assistants actually read?
 
 ```
-npx readable-by-ai https://example.com
+npx readable-by-ai https://example.com   # run without installing
+npm i readable-by-ai                     # or add it to a project
 ```
 
 AI assistants like ChatGPT, Claude, Perplexity and Gemini miss websites for two different reasons, and this tool tells them apart:
